@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<!-- 配置一个过滤器 -->
+	<!-- 过滤器配置 -->
+	<filter>
+		<!-- 内部名称 -->
+		<filter-name>FirstFilter</filter-name>
+		<filter-class>gz.itcast.a_filter.FirstFilter</filter-class>
+		<!-- 初始化参数 -->
+		<init-param>
+			<param-name>AAA</param-name>
+			<param-value>AAA' value</param-value>
+		</init-param>
+		<init-param>
+			<param-name>BBB</param-name>
+			<param-value>BBB' value</param-value>
+		</init-param>
+	</filter>
+	<!-- 过滤器映射配置 -->
+	<filter-mapping>
+		<!-- 也是内部名称，但是和上面的名称保持一致！！！ -->
+		<filter-name>FirstFilter</filter-name>
+		<!--过滤器的url-pattern代表的是过滤的路径,而不是访问过滤器的路径  -->
+		<url-pattern>/index.html</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>First</filter-name>
+		<filter-class>gz.itcast.b_chain.FirstFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>First</filter-name>
+		<url-pattern>/first</url-pattern>
+	</filter-mapping>
+	
+	
+	
+	
+	<servlet>
+    	<servlet-name>TargetServlet</servlet-name>
+    	<servlet-class>gz.itcast.a_filter.TargetServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>TargetServlet</servlet-name>
+    	<!-- servlet的url-pattern代表访问这个servlet的路径 -->
+    	<url-pattern>/target</url-pattern>
+  </servlet-mapping>
+</web-app>
+	
