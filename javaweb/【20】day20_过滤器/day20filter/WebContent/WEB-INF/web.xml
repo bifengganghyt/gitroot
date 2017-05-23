@@ -4,13 +4,34 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	<!-- 参数编码过滤器 -->
+	<filter>
+		<filter-name>EncodingFilter</filter-name>
+		<filter-class>gz.itcast.d_cases.EncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>EncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<servlet>
+    	<servlet-name>GetParamServlet</servlet-name>
+    	<servlet-class>gz.itcast.d_cases.GetParamServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>GetParamServlet</servlet-name>
+    	<url-pattern>/GetParamServlet</url-pattern>
+  	</servlet-mapping>
+  	
+	
 	<!-- 配置一个过滤器 -->
 	<!-- 过滤器配置 -->
-	<filter>
-		<!-- 内部名称 -->
+	<!-- <filter>
+		内部名称
 		<filter-name>FirstFilter</filter-name>
 		<filter-class>gz.itcast.a_filter.FirstFilter</filter-class>
-		<!-- 初始化参数 -->
+		初始化参数
 		<init-param>
 			<param-name>AAA</param-name>
 			<param-value>AAA' value</param-value>
@@ -20,23 +41,31 @@
 			<param-value>BBB' value</param-value>
 		</init-param>
 	</filter>
-	<!-- 过滤器映射配置 -->
+	过滤器映射配置
 	<filter-mapping>
-		<!-- 也是内部名称，但是和上面的名称保持一致！！！ -->
+		也是内部名称，但是和上面的名称保持一致！！！
 		<filter-name>FirstFilter</filter-name>
-		<!--过滤器的url-pattern代表的是过滤的路径,而不是访问过滤器的路径  -->
+		过滤器的url-pattern代表的是过滤的路径,而不是访问过滤器的路径 
 		<url-pattern>/index.html</url-pattern>
 	</filter-mapping>
+	
 	
 	<filter>
 		<filter-name>First</filter-name>
 		<filter-class>gz.itcast.b_chain.FirstFilter</filter-class>
 	</filter>
+	<filter>
+		<filter-name>Second</filter-name>
+		<filter-class>gz.itcast.b_chain.SecondFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Second</filter-name>
+		<url-pattern>/first</url-pattern>
+	</filter-mapping>
 	<filter-mapping>
 		<filter-name>First</filter-name>
 		<url-pattern>/first</url-pattern>
 	</filter-mapping>
-	
 	
 	
 	
@@ -46,8 +75,8 @@
   	</servlet>
   	<servlet-mapping>
     	<servlet-name>TargetServlet</servlet-name>
-    	<!-- servlet的url-pattern代表访问这个servlet的路径 -->
+    	servlet的url-pattern代表访问这个servlet的路径
     	<url-pattern>/target</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
 </web-app>
 	
