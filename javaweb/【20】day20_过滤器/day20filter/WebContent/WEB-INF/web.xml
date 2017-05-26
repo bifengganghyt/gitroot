@@ -6,7 +6,7 @@
 	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 	
 	<!-- 参数编码过滤器 -->
-	<filter>
+	<!-- <filter>
 		<filter-name>EncodingFilter</filter-name>
 		<filter-class>gz.itcast.d_cases.EncodingFilter</filter-class>
 	</filter>
@@ -22,7 +22,7 @@
   	<servlet-mapping>
     	<servlet-name>GetParamServlet</servlet-name>
     	<url-pattern>/GetParamServlet</url-pattern>
-  	</servlet-mapping>
+  	</servlet-mapping> -->
   	
 	
 	<!-- 配置一个过滤器 -->
@@ -67,8 +67,6 @@
 		<url-pattern>/first</url-pattern>
 	</filter-mapping>
 	
-	
-	
 	<servlet>
     	<servlet-name>TargetServlet</servlet-name>
     	<servlet-class>gz.itcast.a_filter.TargetServlet</servlet-class>
@@ -78,5 +76,26 @@
     	servlet的url-pattern代表访问这个servlet的路径
     	<url-pattern>/target</url-pattern>
   </servlet-mapping> -->
+  	
+  	<!-- 网页内容压缩过滤器 -->
+  	<filter>
+		<filter-name>GZIPFilter</filter-name>
+		<filter-class>gz.itcast.d_cases.GZIPFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>GZIPFilter</filter-name>
+		<url-pattern>/content</url-pattern>		
+	</filter-mapping>
+	
+	<servlet>
+    	<servlet-name>ContentServlet</servlet-name>
+    	<servlet-class>gz.itcast.d_cases.ContentServlet</servlet-class>
+  	</servlet>
+  	<servlet-mapping>
+    	<servlet-name>ContentServlet</servlet-name>
+    	<url-pattern>/content</url-pattern>
+  	</servlet-mapping>
+  	
+  	
 </web-app>
 	
