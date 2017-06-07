@@ -23,10 +23,9 @@ public class App {
 		System.out.println(user);//打印:User [id=10000, name=Jack]*/	
 
 		//方式2： 会从当前类所在的包下找bean.xml  【测试方便】
+		//打印:(1)调用getStaticInstace方法   (2)调用User(int id, String name)构造方法
 		ClassPathXmlApplicationContext ac = new ClassPathXmlApplicationContext("bean2.xml", this.getClass());
-	
-	
-	
-	
+		User user = (User) ac.getBean("user1");
+		System.out.println(user);//User [id=101, name=工厂静态方法，创建对象]
 	}
 }

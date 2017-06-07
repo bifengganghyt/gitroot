@@ -10,6 +10,7 @@ public class UserFactory {
 	
 	// 静态
 	public static User getStaticInstace() {
+		System.out.println("调用getStaticInstace方法");
 		return new User(101,"工厂静态方法，创建对象");
 	}
 }

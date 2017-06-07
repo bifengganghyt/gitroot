@@ -12,6 +12,7 @@ public class User {
 		super();
 		this.id = id;
 		this.name = name;
+		System.out.println("调用User(int id, String name)构造方法");
 	}
 
 	public int getId() {
