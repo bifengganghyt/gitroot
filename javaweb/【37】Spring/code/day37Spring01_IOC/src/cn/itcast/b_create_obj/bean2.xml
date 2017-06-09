@@ -19,13 +19,13 @@
 	 	  class 指定工厂的类型；  
 	 	  factory-method: 工厂类的静态方法
 	  -->
-	 <bean id="user1" class="cn.itcast.b_create_obj.UserFactory" factory-method="getStaticInstace"></bean>
+	 <!-- <bean id="user1" class="cn.itcast.b_create_obj.UserFactory" factory-method="getStaticInstace"></bean> -->
 	 
 	 
 	 <!-- * 非静态方法创建对象 -->
 	 <!-- 先创建工厂实例 -->
-	 <!-- <bean id="factory" class="cn.itcast.b_create_obj.UserFactory"></bean>
-	 <bean id="user" factory-bean="factory" factory-method="getInstace"></bean> -->
+	 <bean id="factory" class="cn.itcast.b_create_obj.UserFactory"></bean>
+	 <bean id="user" factory-bean="factory" factory-method="getInstace"></bean> 
 </beans>      
 
 

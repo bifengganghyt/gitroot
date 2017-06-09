@@ -5,6 +5,7 @@ public class UserFactory {
 
 	// 非静态
 	public User getInstace() {
+		System.out.println("调用getInstace方法");
 		return new User(100,"工厂实例方法，创建对象");
 	}
 	
