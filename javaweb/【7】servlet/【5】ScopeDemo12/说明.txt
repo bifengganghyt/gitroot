@@ -1,0 +1,3 @@
+1. http://localhost:8080/servletDemo/ScopeDemo1
+2.http://localhost:8080/servletDemo/ScopeDemo2
+±Ê¼Ç:10.3

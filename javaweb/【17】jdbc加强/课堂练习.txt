@@ -1,0 +1,11 @@
+1.创建一张附件表
+    attachments:
+	id 编号
+	name 附件名称 varchar
+	file 附件文件  blob类型
+	addtime 添加时间
+	author 附件作者
+使用jdbc添加两个文件到附件表中,再从数据库读取写回到硬盘中
+	
+insert into dept(id,name) values(2,'xxx')
+insert into employee(id,name,deptId) values(1,'xx',2)
