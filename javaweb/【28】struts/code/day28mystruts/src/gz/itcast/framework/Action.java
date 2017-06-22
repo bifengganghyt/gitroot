@@ -9,5 +9,5 @@ import javax.servlet.http.HttpServletResponse;
  * 2017Äê6ÔÂ21ÈÕ
  */
 public interface Action {
-	public String execute(HttpServletRequest request, HttpServletResponse response) ;
+	public String execute(HttpServletRequest request, HttpServletResponse response) throws Exception ;
 }
