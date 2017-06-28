@@ -1,0 +1,152 @@
+<html >
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>3.面向对象</title>
+	</head>		
+	<body>
+		<h1>3.面向对象</h1>
+<script type="text/javascript" >
+
+	//3.1	基本数据类型包装类
+	//3.6.1	String
+	//通过构造函数创建String 对象
+	/*var b = new String("java");
+	var c = new String("java");
+	document.write(b + "," + c);
+	document.write(b == c); //false*/
+
+	//比较字符串的值是否相等
+	/*document.write(b.valueOf() == c.valueOf());*/
+
+	//属性
+	/*var a = "helloworld";
+	document.write(a.length);//10*/
+
+
+	//3.6.1 String方法
+	/*document.write("第五章".anchor("ch1")+"<br/>");//第五章
+	document.write("第五章".blink()+"<br/>");      //第五章
+	// 	返回在指定位置的字符。
+	document.write("第五章".charAt(0)+"<br/>");    //第
+	document.write("a".charCodeAt(0)+"<br/>");     //97
+	document.write("第五章".concat("abc")+"<br/>"); //第五章abc
+	document.write("第五章".fontcolor("#ff0000")+"<br/>");//第五章
+	document.write("第五章".indexOf("五")+"<br/>");  //1
+	document.write("第五章".italics()+"<br/>");      //第五章
+	document.write("第五章".link()+"<br/>");         //第五章
+	document.write("helloworld".replace(/l/g, "L")+"<br/>");//heLLoworLd
+	document.write("<br/>");
+	var names = "jack-lili-lucy".split("-");
+	for (var temp in names) {
+		document.write(names[temp] + "<br/>");//jack lili lucy
+	}
+	document.write("<br/>");
+	document.write("helloworld".substr(1, 2)+"<br/>"); //el
+	document.write("helloworld".substring(1, 2)+"<br/>");//e
+	document.write("helloworld".toUpperCase()+"<br/>");  //HELLOWORLD
+	document.write(new String("java").toString() == new String("java").toString()+"<br/>");//false*/
+
+
+	//3.6.2 number
+	//创建number对象
+	/*var a = 12;
+	var b = new Number(12);
+	document.write((a + ":" + b )+"<br/>");//12:12
+	//比较数值
+	document.write((a == b) +"<br/>");//true
+	//没有转型:比较数值和类型
+	document.write((a === b) +"<br/>");//false
+	//false
+	document.write((new Number(12) == new Number(12)) +"<br/>");//false
+	//false
+	document.write((new Number(12) === new Number(12))+"<br/>");//false
+	// false
+	document.write((new Number(12).valueOf() == new Number(12).valueOf())+"<br/>");//true
+	//true
+	document.write((new Number(12).valueOf() === new Number(12).valueOf())+"<br/>");//true
+
+
+	document.write("最大值" + Number.MAX_VALUE + "</br>");//最大值1.7976931348623157e+308
+	document.write("最小值" + Number.MIN_VALUE + "</br>");//最小值5e-324
+
+	//方法
+	document.write(new Number(12).toString(10) + "<br/>");//12
+	document.write(new Number(12).toString(2) + "<br/>"); //1100
+	document.write(new Number(12).toString(8) + "<br/>"); //14
+	document.write(new Number(12).toString(16) + "<br/>"); //c
+	document.write(new Number(12.12345) + "<br/>");        //12.12345
+	document.write(new Number(12.12345).toFixed() + "<br/>"); //12
+	document.write(new Number(12.12345).toFixed(2) + "<br/>");//12.12
+	document.write(new Number(12.12345).toFixed(3) + "<br/>");//12.123*/
+
+	//3.6.3	Boolean
+	/*var a = new Boolean('');
+	//function Boolean() { [native code] }
+	document.write(a.constructor + "<br/>");
+	document.write(a.toString() + "<br/>");//false
+	document.write(a.valueOf() + "<br/>");//false
+	if (a.valueOf()) {
+		document.write("条件成立<br/>");
+	} else {//条件不成立
+		document.write("条件不成立<br/>");
+	}*/
+
+	/*document.write(Math.ceil(12.34) + "<br/>");//13
+	document.write(Math.floor(12.34) + "<br/>");//12
+	document.write(Math.round(12.54) + "<br/>");//13
+	document.write(Math.round(12.35) + "<br/>");//12
+	document.write(Math.random() + "<br/>");//0~1
+document.write(Math.max(12, 100, -1, 200, 320, 500) + "</br>");
+document.write(Math.min(12, 100, -1, 200, 320, 500) + "</br>");*/
+
+	//3.4数组
+	//数组的声明和初始化,注意:数组的长度取决于整数下标的个数
+	/*var arr = new Array();
+	arr[0] = "aa";   //2
+	arr[1] = "bb";
+	arr[6] = 'xx';
+	document.write(arr + "<br/>");//aa,bb,,,,,xx
+	//遍历数组
+	for (var i = 0; i < arr.length; i++) {
+		document.write(arr[i]+"<br/>");
+	}
+	//下标越界时：
+	var arr = ["aa", "bb"];
+	document.write(arr[200]);// 显示undefined*/
+
+
+	/*var a = [1, 2, 3];
+	//连接两个或更多的数组，并返回结果。
+	document.write(a.concat([100, 30]) + "<br/>");
+	document.write(a.concat([100, 30], [60, 90]) + "<br/>");
+	//把数组的所有元素放入一个字符串。元素通过指定的分隔符进行分隔。
+	var b = a.join("$");
+	document.write(b + "<br/>");
+	document.write( typeof b + "<br/>");
+	//string
+	//删除并返回数组的最后一个元素
+	document.write(a.pop() + "<br/>");
+	//向数组的末尾添加一个或更多元素，并返回新的长度。
+	document.write(a.push(99, 78) + "<br/>");
+	//把数组转换为字符串，并返回结果。
+	document.write(a.toString() + "<br/>");
+	//返回数组对象的原始值
+	var c = a.valueOf();
+	document.write( typeof c + "<br/>");
+*/
+
+	var a = [100, 9, 20, 3, 7, 96];
+	document.write(a + "<br/>");//100,9,20,3,7,96
+	//如果调用该方法时没有使用参数，将按字母顺序对数组中的元素进行排序
+	a.sort();
+	document.write(a + "<br/>"); //100,20,3,7,9,96
+	//指定比较方式
+	a.sort(compareTo);
+	document.write(a + "<br/>"); //3,7,9,20,96,100
+	function compareTo(a, b) {
+		return a - b;
+	}
+</script>
+	</body>
+</html>
+

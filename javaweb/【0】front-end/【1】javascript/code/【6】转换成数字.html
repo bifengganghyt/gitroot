@@ -1,0 +1,10 @@
+<script type="text/javascript" >
+	document.write(parseFloat("123")  + "<br/>");// 123
+	document.write(parseFloat("123.53")  + "<br/>");// 123.53
+	document.write(parseFloat("012")  + "<br/>");// 12
+	document.write(parseFloat("000012")  + "<br/>");// 12
+	document.write(parseFloat("0x20")  + "<br/>");// 0
+	document.write(parseFloat("-59")  + "<br/>");// -59
+	document.write(parseFloat("abc123")  + "<br/>");//  NaN (Not a Number)，表示不是一个数字。
+	document.write(parseFloat("123ab2c")  + "<br/>");//123 //会解析前面正确的数字，直到遇到不正确的数字。
+</script>

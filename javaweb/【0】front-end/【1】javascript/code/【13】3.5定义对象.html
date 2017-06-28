@@ -1,0 +1,73 @@
+<html >
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>3.面向对象</title>
+	</head>		
+	<body>
+		<h1>3.面向对象</h1>
+<script type="text/javascript" >
+
+	/*
+ * 自定义对象
+*/
+/*function Person() {
+	window.document.write("constructor()<br>");
+}
+
+var person = new Person();
+//定义属性
+person.name = "jack";
+person.age = 23;
+//定义方法
+person.work = function() {
+	window.document.write("person working...<br/>");
+};
+//获取构造函数
+//function Person() { window.document.write("constructor()"); }
+window.document.write(person.constructor + "<br/>");  
+
+//jack,23
+window.document.write(person.name + "," + person.age + "<br/>");
+
+//person working...
+person.work();*/
+
+	//3.5.2	有参数构造函数
+	/*function Person(name, age) {
+		this.name = name;
+		this.age = age;
+		this.work = function() {
+			alert(this.name + ":" + this.age); 
+		}
+	}
+	var person = new Person("jack", 28);
+	person.work(); //jack:28*/
+
+	/*
+ 		* 自定义对象Object方式
+	*/
+	/*var person = new Object();
+	person.name = "jack";
+	person.age = 28;
+	person.sayHello = function() {
+		document.write(this.name + ":" + this.age);
+	}
+	person.sayHello();*/
+
+
+
+ 	function employee(name,job,born) { 
+ 		this.name=name; 
+ 		this.job=job; 
+ 		this.born=born; 
+ 	} 
+ 	var bill=new employee("Bill Gates","Engineer",1985); 
+ 	employee.prototype.salary=null; 
+ 	bill.salary=20000; 
+ 	document.write(bill.salary); 
+
+
+</script>
+	</body>
+</html>
+
