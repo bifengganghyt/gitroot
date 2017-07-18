@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hello world</title>
+	<script src="./build/react.min.js"></script>
+	<script src="./build/react-dom.min.js"></script>
+	<script src="./build/browser.min.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+	<script type="text/babel">
+		ReactDOM.render(
+			<div>
+			<h1>hello, world!</h1>
+			<h2>welcome study</h2>
+			{/* 注释:添加自定义属性需要使用 data- 前缀 */}
+			<p data-myattribute= "somevalue">JavaScript</p>
+			</div>,
+		    document.getElementById('container')
+		);
+	</script>
+</body>
+</html>

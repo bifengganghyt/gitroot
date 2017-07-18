@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hello world</title>
+	<meta charset="utf-8">
+	<script src="./build/react.min.js"></script>
+	<script src="./build/react-dom.min.js"></script>
+	<script src="./build/browser.min.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+	<script type="text/babel">
+		var arr = [
+			<h1>react教程</h1>,
+			<h2>学的不仅是技术，更是梦想！</h2>,
+		];
+
+		ReactDOM.render(
+			<div>{arr}</div>,
+		    document.getElementById('container')
+		);
+	</script>
+</body>
+</html>
