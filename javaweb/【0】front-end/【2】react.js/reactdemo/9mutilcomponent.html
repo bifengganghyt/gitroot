@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hello world</title>
+	<meta charset="utf-8">
+	<script src="./build/react.min.js"></script>
+	<script src="./build/react-dom.min.js"></script>
+	<script src="./build/browser.min.js"></script>
+</head>
+<body>
+	<div id="container"></div>
+	<script type="text/babel">
+		var Website = React.createClass({
+			render: function() {
+				return (
+					<div>
+						<Name name= {this.props.name} />
+						<Link site= {this.props.site} />
+					</div>
+				);
+			}
+		});
+
+		var Name = React.createClass({
+			render : function() {
+				return (
+					<h1> {this.props.name}</h1>
+				);
+			}
+		});
+
+		var Link = React.createClass({
+			render : function() {
+				return (
+					<a href={this.props.site}>{this.props.site}</a>
+				);
+			}
+		});
+
+	ReactDOM.render(
+		<Website name="菜鸟教程" site="http://www.runoob.com" />,
+		document.getElementById('container')
+	);
+	</script>
+</body>
+</html>
