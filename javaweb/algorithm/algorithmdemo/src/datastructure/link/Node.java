@@ -1,4 +1,4 @@
-package link;
+package datastructure.link;
 
 class Node<E> {
 	E item;
