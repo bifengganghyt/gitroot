@@ -21,9 +21,6 @@ public class Test {
 		return false;
 	}
 	
-	/**
-	 * 
-	 */
 	public static boolean isPower2(int n) {
 		if(n<1) {
 			return false;
