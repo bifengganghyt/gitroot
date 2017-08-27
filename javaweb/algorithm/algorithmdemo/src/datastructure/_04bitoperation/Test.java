@@ -32,7 +32,11 @@ public class Test {
 	
 	
 	public static void main(String[] args) {
-		System.out.println(isPower2(4));//true
-		System.out.println(isPower2(6));//false
+		/*System.out.println(isPower2(4));//true
+		System.out.println(isPower2(6));//false*/
+		short a = 128;
+		byte b = (byte)a;
+		System.out.println(b);
+		
 	}
 }
