@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.naming.java.javaURLContextFactory;
+
 public class LifeDemo extends HttpServlet{
 	
 	/**
@@ -46,4 +48,6 @@ public class LifeDemo extends HttpServlet{
 		super.doGet(req, resp);
 		System.out.println("doGet方法被调用");
 	}*/
+	
+	
 }
