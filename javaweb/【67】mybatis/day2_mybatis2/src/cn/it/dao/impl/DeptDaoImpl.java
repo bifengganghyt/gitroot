@@ -25,6 +25,7 @@ public class DeptDaoImpl {
 		int i = 0;
 		try {
 			sqlSession = MybatisSessionFactory.getSession();
+			System.out.println("save:" + sqlSession);
 			
 			i = sqlSession.insert("cn.it.entity.DeptMapper.insertDept", dept);
 			
@@ -45,6 +46,7 @@ public class DeptDaoImpl {
 		
 		try {
 			sqlSession = MybatisSessionFactory.getSession();
+			System.out.println("update:" + sqlSession);
 			i = sqlSession.update("cn.it.entity.DeptMapper.updateDept",dept);
 			sqlSession.commit();
 		} catch (Exception e) {
@@ -60,6 +62,7 @@ public class DeptDaoImpl {
 		int i = 0;
 		try {
 			sqlSession = MybatisSessionFactory.getSession();
+			System.out.println("delete:" + sqlSession);
 			i = sqlSession.update("cn.it.entity.DeptMapper.deleteDept", id);
 			sqlSession.commit();
 		} catch (Exception e) {
