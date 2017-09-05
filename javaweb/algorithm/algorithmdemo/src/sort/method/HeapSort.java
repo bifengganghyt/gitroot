@@ -2,7 +2,6 @@ package sort.method;
 
 /**
  * ∂—≈≈–Ú
- * @author S43W
  *
  */
 public class HeapSort {

@@ -5,7 +5,7 @@ public class SortMethod {
 	public static void main(String[] args) {
 		int[] array = new int[]{9,7,8,3,49,0,5,7,2};
 		//funBubbleSort(array);
-		funSelectionSort(array);
+		//funSelectionSort(array);
 		
 		for(int i=0; i< array.length;i++) {
 			System.out.println(array[i]);
@@ -34,7 +34,7 @@ public class SortMethod {
 	
 	/**
 	 * 简单选择排序
-	 * 思想:共排n-1次;第i次,从n-i个数中找到最小的，放在位置(i-1)上
+	 * 思想:共排n-1次;第i次,从n-i+1个数中找到最小的，放在位置(i-1)上
 	 * @param array
 	 */
 	public static void funSelectionSort(int[] array) {
@@ -53,9 +53,6 @@ public class SortMethod {
 				array[mink] = array[i];
 				array[i] = temp;
 			}
-			
 		}
-
 	}
-	
 }
